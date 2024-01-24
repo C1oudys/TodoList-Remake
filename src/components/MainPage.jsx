@@ -15,8 +15,8 @@ import Layout from "./Layout";
 const MainPage = () => {
     const [todos, setTodos] = useState([]);
   
-    const onSubmitTodo = (nextTodo) => {
-      setTodos((prevTodos) => [nextTodo, ...prevTodos]);
+    const onSubmitTodo = (newTodo) => {
+      setTodos((prevTodos) => [newTodo, ...prevTodos]);
     };
   
     const onDeleteTodoItem = (id) => {
@@ -45,7 +45,7 @@ const MainPage = () => {
         <Header />
         <InputForm onSubmitTodo={onSubmitTodo} />
         <TodoList
-          headTitle="Working!"
+          headTitle="Working..."
           todos={workingTodos}
           onDeleteTodoItem={onDeleteTodoItem}
           onToggleTodoItem={onToggleTodoItem}

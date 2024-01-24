@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
 const InputForm = ({ onSubmitTodo }) => {
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -23,6 +20,9 @@ const InputForm = ({ onSubmitTodo }) => {
     setTitle("");
     setContent("");
   };
+
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
 
   return (
     <form onSubmit={handleSubmit}>
