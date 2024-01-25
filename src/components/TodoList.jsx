@@ -1,6 +1,6 @@
 import React from "react";
 import TodoItem from "./Todoitem";
-import styles from "./TodoList.module.css"; // Adjust the import based on your actual file structure
+import styles from "./TodoList.module.css"; 
 
 const TodoList = ({ headTitle, todos, onDeleteTodoItem, onToggleTodoItem }) => {
   return (
