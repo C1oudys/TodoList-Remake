@@ -1,5 +1,10 @@
 .wrap-layout {
   min-width: 800px;
   max-width: 1200px;
+  position: relative;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
