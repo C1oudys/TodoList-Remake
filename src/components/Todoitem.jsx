@@ -1,20 +1,20 @@
 
 function Todoitem({ todos, setTodos, isDone }) {
-  const handleDelete = (todo) => {
+  const handleDelete = (selectedTodo) => {
     const handleDelete = window.confirm("정말로 삭제 하시겠습니까?");
     if (handleDelete) {
-      const newTodos = todos.filter((todoItem) => todoItem.id !== todo.id);
+      const newTodos = todos.filter((todo) => todo.id !== selectedTodo.id);
       setTodos(newTodos);
       alert("삭제 되었습니다.");
     }
   };
 
-  const handleToggle = (todo) => {
-    const toggle = todo.isDone ? "취소" : "완료";
+  const handleToggle = (selectedTodo) => {
+    const toggle = selectedTodo.isDone ? "취소" : "완료";
     const handleToggle = window.confirm(`작업을 ${toggle}하시겠습니까?`);
     if (handleToggle) {
-      const newTodos = todos.map((todoItem) =>
-        todoItem.id === todo.id ? { ...todoItem, isDone: !todoItem.isDone } : todoItem
+      const newTodos = todos.map((todo) =>
+        todo.id === selectedTodo.id ? { ...todo, isDone: !todo.isDone } : todo
       );
       setTodos(newTodos);
     }
