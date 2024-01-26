@@ -1,11 +1,11 @@
-import React from "react";
+
 
 const Header = () => {
     return (
-      <header className="todoHeader">
+        <header className="todoHeader">
         <h1>Min's TodoList</h1>
-      </header>
+        </header>
     );
-  };
+};
 
 export default Header;
